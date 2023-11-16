@@ -1,0 +1,124 @@
+/* #region RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* #endregion */
+
+/* #region COMMON */
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* #endregion */
+
+/* #region BODY */
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* #endregion */
+
+/* #region HEADER */
+
+header {
+  justify-content: space-between;
+}
+
+header,
+.left-content {
+  display: flex;
+  align-items: center;
+}
+
+header #logo {
+  width: 3.75rem;
+  height: 3.75rem;
+}
+
+header .right-content button {
+  margin-right: 1.5625rem;
+  padding: 0 2.625rem;
+}
+
+/* #endregion */
+
+/* #region MAIN */
+
+main {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #001533;
+}
+
+main .container {
+  width: 37.5rem;
+  height: 37.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+main .container h2 {
+  color: #01e165;
+  font-family: Arial, Helvetica, sans-serif;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+main .container h2.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+main .cell {
+  background-color: #01e165;
+  border: 1px solid #fff;
+  text-align: center;
+  line-height: 60px;
+}
+
+main .active {
+  background-color: aquamarine;
+}
+
+main .cell.red {
+  background-color: #f00;
+}
+
+main .cell.easy {
+  width: calc(100% / 10);
+  height: calc(100% / 10);
+}
+
+main .cell.medium {
+  width: calc(100% / 9);
+  height: calc(100% / 9);
+}
+
+main .cell.hard {
+  width: calc(100% / 7);
+  height: calc(100% / 7);
+}
+
+/* #endregion */
+
+/* #region FOOTER */
+
+footer {
+  padding: 1.25rem;
+}
+
+/* #endregion */
