@@ -27,10 +27,6 @@ function bombCreation(difficultyLevel) {
       i++;
     }
   }
-  // for (let i = 0; i < 16; i++) {
-  //   num = 1 + i;
-  //   bombs.push(num);
-  // }
   return bombs;
 }
 
