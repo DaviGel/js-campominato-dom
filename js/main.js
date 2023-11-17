@@ -20,12 +20,16 @@ function bombCreation(difficultyLevel) {
   else if (difficultyLevel === 'medium') multiplyer = 81;
   else multiplyer = 49;
   // Genera 16 numeri casuali di range pari al numero di caselle del livello scelto
-  while (i < 16) {
-    num = Math.floor(Math.random() * multiplyer) + 1;
-    if (!bombs.includes(num)) {
-      bombs.push(num);
-      i++;
-    }
+  // while (i < 16) {
+  //   num = Math.floor(Math.random() * multiplyer) + 1;
+  //   if (!bombs.includes(num)) {
+  //     bombs.push(num);
+  //     i++;
+  //   }
+  // }
+  for (let i = 0; i < 16; i++) {
+    num += 1;
+    bombs.push(num);
   }
   return bombs;
 }
@@ -50,9 +54,13 @@ function removeEL(element) {
 function handleEventListener(e) {
   const children = container.children;
   // SE ho aperto tutte le celle e non ho trovato una bomba
-  if (points.length >= difficultyCells - 16) {
+  if (
+    points.length >= difficultyCells - 17 &&
+    !bombs.includes(Number(e.target.innerHTML))
+  ) {
     e.target.classList.add('active');
     container.removeEventListener('click', handleEventListener);
+    points.push(1);
     console.log(
       'Hai vinto! Hai totalizzato un punteggio di',
       pointStamp(points)
