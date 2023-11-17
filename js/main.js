@@ -70,7 +70,6 @@ function handleEventListener(e) {
   ) {
     e.target.classList.add('active');
     points.push(1);
-    console.log(points);
     // E' una bomba allora aggiungo classe red tolgo EL e stampo punteggio e lo azzero
   } else if (bombs.includes(Number(e.target.innerHTML))) {
     for (let i = 0; i < children.length; i++) {
