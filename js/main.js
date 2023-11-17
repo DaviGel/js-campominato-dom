@@ -49,7 +49,7 @@ function removeEL(element) {
 // Gestione aggiunta e rimozione Event Listener
 function handleEventListener(e) {
   const children = container.children;
-  // SE ho aperto tutte le celle e non ho trovato una bomba
+  // SE ho aperto tutte le celle meno una e non ho trovato una bomba
   if (
     points.length >= difficultyCells - 17 &&
     !bombs.includes(Number(e.target.innerHTML)) &&
